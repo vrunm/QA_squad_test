@@ -6,11 +6,15 @@ answer to every question is a segment of text from the corresponding reading pas
 is unanswerable. 
 
 The dataset contains the columns
-id: a string feature.
-title: a string feature.
-context: a string feature.
-question: a string feature.
-answers: a dictionary feature containing:
+Id: a string feature.
+
+Title: a string feature.
+
+Context: a string feature.
+
+Question: a string feature.
+
+Answers: a dictionary feature containing:
 
 Leverage the two datasets in the following way:
 • train (129,941 examples): All taken from the official SQuAD 2.0 training set.
