@@ -24,6 +24,11 @@ Leverage the two datasets in the following way:
 > Fine Tuning of the model has been done using the research paper: "[Question and Answering on SQuAD 2.0: BERT Is All
 You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf))".
 
+| Model | Epochs | EM | F1 Score(Weighted) |
+| ----- | ------ | -------- | ------------------ |
+|BERT | 6 | 70 | 76|
+|DistilBERT | 6 | 86% |0.86|
+|Roberta  | 6 | 76% |0.74|
 
 **Evaluation Method**
 To evaluate our models we use the standard SQuAD performance metrics: Exact Match (EM) score
