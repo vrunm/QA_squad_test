@@ -46,7 +46,7 @@ The table lists out the different optimizers and thier parameters used in traini
 
 The following research paper has been used for fine tuning the optimizers:[On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
 
-Optimizer | Learning Rate | $\gamma$| Momentum $\eta$ | Alpha $\alpha$ | Beta1 $\beta$ | Beta2 $\beta$
+Optimizer | Learning Rate | $\gamma$| Momentum $\eta$ | Alpha $\alpha$ | Beta1 $\beta_1$ | Beta2 $\beta_2$
 | --- | --- | --- | --- | --- | --- | --- |
 AdamW | 5e-5 |    |     |     | 10e-3 |10e-4|
 RMSprop | 0.01 | 0.01 | 0.99|     | 10e-3  | 10e-5|
