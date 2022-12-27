@@ -1,4 +1,7 @@
 # QA_squad_test
+Question Answering on the Squad Dataset
+
+Question Answering
 Squad Dataset:
 SQuAD 2.0, which is a reading comprehension dataset
 consisting of questions posed by crowdworkers on a set of Wikipedia articles. Furthermore, the
@@ -20,6 +23,40 @@ Leverage the two datasets in the following way:
 • train (129,941 examples): All taken from the official SQuAD 2.0 training set.
 • dev (6,078 examples): Half of the official dev set, randomly selected.
 • test (5,921 examples): The rest of the official dev set, plus hand-labeled examples.
+
+To fine-tune BERT for a Question-Answering system, it introduces a start vector and an end vector. The probability of each word being the start-word is calculated by taking a dot product between the final embedding of the word and the start vector, followed by a softmax over all the words. The word with the highest probability value is considered.
+
+## Experiments:
+#### **BERT:**
+
+- A baseline was created using the BERT model. Training the model with an **Adam optimizer with learning rate of 5e-5** for **6 epochs** yielded an **Accuracy of 86% and an F1 Score of 0.86.**
+
+#### **DistilBERT**
+
+- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5, yielded an **Accuracy of 82% and an F1 Score of 0.81.**
+
+#### **FINBERT**
+
+- The FINBERT model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Accuracy of 90.91% and an F1 Score of 0.91.**
+
+**Hyperparameter Tuning**
+
+Below are the hyperparameters that have been tweaked for BERT base uncased:
+
+1. **Number of Directed co-Attention layers** - We tried various numbers of layers and we found
+out that N=7 for the co-attention layers gave us optimal performance while being able to fit
+the model on 2 GPUs (3 F1 score improvement by itself).
+2. **Max Sequence length** - After initial experiments with default sequence length (context + query token) 384, we switched to a sequence length of 512. This gave us a 0.6 F1
+improvement on our model.
+3. **Batch Size** - Default: 12, We had to use a batch size of 6 for all our experiments due to
+resource constraints and out of memory issues on the GPU for any larger batch size.
+4. **Number of epochs** - Default: 2 On increasing the number of epochs we saw a significant
+degradation in performance (-3 F1 score), we attribute this to the fact that the model starts
+to overfit to the training data with high variance and since the batch size is smaller the
+gradient updates could be noisy not allowing it to optimally converge.
+5. **Learning Rate** - Default: 3e-5 We wrote a script to help us find the optimal learning rate
+using grid search and found the optimal learning rates for SQuAD 2.0 and SQuAD 2.Q
+respectively for batch size of 6.
 
 > Fine Tuning of the model has been done using the research paper: "[Question and Answering on SQuAD 2.0: BERT Is All
 You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf))".
@@ -67,5 +104,5 @@ SGD   | 0.01 |
 
 The rate of convergence of the Adam optimizer is the fastest.
 
-We can conclude the order of convergence of the optimizers:
+We can conclude the **empirical order of convergence** of the optimizers:
 AdamW > RMSprop > NAG > SGD (Momentum) > SGD
