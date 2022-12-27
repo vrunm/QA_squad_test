@@ -1,12 +1,13 @@
 # QA_squad_test
 Question Answering on the Squad Dataset
+-We propose the task of QA ovr financial data to assit financial analysis.
+-The questions in FINQA pose great challenge for existing models to resolve domain specific knowledge , as well as to acquire complex numerical reasoning abilities.
+-The results show that current large pre trained  models still fall far behind the human expert performance.We believe 
 
-Question Answering
-Squad Dataset:
-SQuAD 2.0, which is a reading comprehension dataset
-consisting of questions posed by crowdworkers on a set of Wikipedia articles. Furthermore, the
-answer to every question is a segment of text from the corresponding reading passage or the question
-is unanswerable. 
+## Data:
+**Squad Dataset**:
+
+The Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset consisting of questions posed by crowdworkers on a set of Wikipedia articles. The answer to every question is a segment of text, or span, from the corresponding reading passage. There are 100,000+ question-answer pairs on 500+ articles.
 
 The dataset contains the columns
 Id: a string feature.
@@ -33,7 +34,7 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 
 #### **DistilBERT**
 
-- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5, yielded an **Accuracy of 82% and an F1 Score of 0.81.**
+- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Accuracy of 82% and an F1 Score of 0.81.**
 
 #### **FINBERT**
 
