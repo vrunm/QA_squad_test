@@ -1,9 +1,7 @@
 # QA_squad_test
 Question Answering on the Squad Dataset
--We propose the task of QA ovr financial data to assit financial analysis.
--The questions in FINQA pose great challenge for existing models to resolve domain specific knowledge , as well as to acquire complex numerical reasoning abilities.
--The results show that current large pre trained  models still fall far behind the human expert performance.We believe 
 
+-SQuAD belongs to a subdivision of QA known as extractive question answering, often also referred to as reading comprehension. Its data is formed from triples of question, passage and answer. When an extractive QA system is presented a question and a passage, it is tasked with returning the string span from the passage which answers the question 
 ## Data:
 **Squad Dataset**:
 
