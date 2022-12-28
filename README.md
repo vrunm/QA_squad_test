@@ -90,7 +90,7 @@ positives + false positives) and recall = true positives / (false negatives + tr
 Considering the FinBERT model a detailed analysis of the optimizers used for training has been done.
 The table lists out the different optimizers and thier parameters used in training.
 
-The following research paper has been used for fine tuning the optimizers:[On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
+The following research paper has been used for fine tuning the optimizers: [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
 
 Optimizer | Learning Rate $\gamma$ | | Momentum $\eta$ | Alpha $\alpha$ | Beta1 $\beta_1$ | Beta2 $\beta_2$
 | --- | --- | --- | --- | --- | --- | --- |
