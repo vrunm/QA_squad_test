@@ -1,7 +1,17 @@
 # QA_squad_test
 Question Answering on the Squad Dataset
 
--SQuAD belongs to a subdivision of QA known as extractive question answering, often also referred to as reading comprehension. Its data is formed from triples of question, passage and answer. When an extractive QA system is presented a question and a passage, it is tasked with returning the string span from the passage which answers the question 
+•SQuAD belongs to a subdivision of QA known as extractive question answering, often also referred to as reading comprehension. Its data is formed from triples of question, passage and answer. When an extractive QA system is presented a question and a passage, it is tasked with returning the string span from the passage which answers the question.
+The Squad creaters proposed this dataset as a means for networks to actually understand the text they were being interrogated about rather than simply being extractive papers.
+•The base BERT model has 12 transformer
+encoder layers that terminate in an interchangeable final layer which can be finetuned to the specific task. We chose this network as our baseline because of its use of contextual embeddings and global attention and because of the speed advantage derived from an RNN free architecture
+
+•The base BERT network, the baseline for this project, is built with 12 Transformer encoder blocks.
+These encoder blocks contain multi-head attention and a feed forward network. Each head of the
+multi-head attention attends to the concatenation of the context and query input and thus forms a
+global attention output. The output of each Transformer encoder is fed in to the next layer, creating
+an attention hierarchy. 
+
 ## Data:
 **Squad Dataset**:
 
