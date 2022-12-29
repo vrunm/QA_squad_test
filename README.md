@@ -51,7 +51,7 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 
 **Hyperparameter Tuning**
 
-Below are the hyperparameters that have been tweaked for BERT base uncased:
+Below are the hyperparameters that have been used for the BERT base uncased model:
 
 1. **Number of Directed co-Attention layers** - We tried various numbers of layers and we found
 out that N=7 for the co-attention layers gave us optimal performance while being able to fit
