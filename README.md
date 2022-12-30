@@ -20,7 +20,7 @@ The Stanford Question Answering Dataset (SQuAD) is a reading comprehension datas
 The dataset contains the columns
 Id: a string feature.
 
-Title: a string feature.
+Title: The Title for each question adn answer pair.
 
 Context: a string feature.
 
