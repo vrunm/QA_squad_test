@@ -1,5 +1,4 @@
-# QA_squad_test
-Question Answering on the Squad Dataset
+# Question Answering on the Squad Dataset
 
 •SQuAD belongs to a subdivision of QA known as extractive question answering, often also referred to as reading comprehension. Its data is formed from triples of question, passage and answer. When an extractive QA system is presented a question and a passage, it is tasked with returning the string span from the passage which answers the question.
 The Squad creaters proposed this dataset as a means for networks to actually understand the text they were being interrogated about rather than simply being extractive papers.
