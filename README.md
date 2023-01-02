@@ -72,7 +72,7 @@ You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/d
 
 | Model | Epochs | EM | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
-|BERT | 6 | 70 | 76|
+|BERT | 6 | 70% | 76|
 |DistilBERT | 6 | 86% |0.86|
 |Roberta  | 6 | 76% |0.74|
 
