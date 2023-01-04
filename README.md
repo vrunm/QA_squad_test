@@ -60,7 +60,7 @@ improvement on our model.
 3. **Batch Size** - Default: 12, We had to use a batch size of 6 for all our experiments due to
 resource constraints and out of memory issues on the GPU for any larger batch size.
 4. **Number of epochs** - Default: 2 On increasing the number of epochs we saw a significant
-degradation in performance (-3 F1 score), we attribute this to the fact that the model starts
+degradation in performance , we attribute this to the fact that the model starts
 to overfit to the training data with high variance and since the batch size is smaller the
 gradient updates could be noisy not allowing it to optimally converge.
 5. **Learning Rate** - Default: 3e-5 We wrote a script to help us find the optimal learning rate
