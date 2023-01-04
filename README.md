@@ -52,18 +52,15 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 
 Below are the hyperparameters that have been used for the BERT base uncased model:
 
-1. **Number of Directed co-Attention layers** - We tried various numbers of layers and we found
-out that N=7 for the co-attention layers gave us optimal performance while being able to fit
-the model on 2 GPUs (3 F1 score improvement by itself).
-2. **Max Sequence length** - After initial experiments with default sequence length (context + query token) 384, we switched to a sequence length of 512. This gave us a 0.6 F1
+1. **Max Sequence length** - After initial experiments with default sequence length (context + query token) 384, we switched to a sequence length of 512. This gave us a 0.6 F1
 improvement on our model.
-3. **Batch Size** - Default: 12, We had to use a batch size of 6 for all our experiments due to
+2. **Batch Size** - Default: 12, We had to use a batch size of 6 for all our experiments due to
 resource constraints and out of memory issues on the GPU for any larger batch size.
-4. **Number of epochs** - Default: 2 On increasing the number of epochs we saw a significant
+3. **Number of epochs** - Default: 2 On increasing the number of epochs we saw a significant
 degradation in performance , we attribute this to the fact that the model starts
 to overfit to the training data with high variance and since the batch size is smaller the
 gradient updates could be noisy not allowing it to optimally converge.
-5. **Learning Rate** - Default: 3e-5 We wrote a script to help us find the optimal learning rate
+4. **Learning Rate** - Default: 3e-5 We wrote a script to help us find the optimal learning rate
 using grid search and found the optimal learning rates for SQuAD 2.0 and SQuAD 2.Q
 respectively for batch size of 6.
 
@@ -93,12 +90,12 @@ The table lists out the different optimizers and thier parameters used in traini
 The following research paper has been used for fine tuning the optimizers: [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
 
 Optimizer | Learning Rate $\gamma$ |   Momentum $\eta$ | Alpha $\alpha$ | Beta1 $\beta_1$ | Beta2 $\beta_2$ | Epsilon $\epsilon$ |
-| ---     | ---                    | ---               | ---            | ---             | ---             | ---                |
-AdamW     | 5e-5                   | 0.01              | 0.9            | 0.9             | 0.999           | 1e-5               |
-RMSprop   | 0.01                   | 0.01              | 0.99           | -               | -               |  -                 |
-NAG       | 5e-5 |                 | -                 | -              | -               |-                | -                  |   
-SGD(Momentum)| 5e-5                | 0.001             | -              |  -              |-                | -                  |
-SGD          | 0.01 |              |                   |                 |                 |                |                    |
+| ---     | ---                    | ---               | ---            | ---             | ---            | ---                |
+AdamW     | 5e-5                   | 0.01              | 0.9            | 0.9             | 0.999          | 1e-5               |
+RMSprop   | 0.01                   | 0.01              | 0.99           | -               | -              | 1e-5                |
+NAG       | 5e-5 |                 | -                 | -              | -               |-               | 1e-5                  |   
+SGD(Momentum)| 5e-5                | 0.001             | -              |  -              |-               | 1e-5                  |
+SGD          | 0.01 |              |                   |                 |                |                | 1e-5                   |
 
 
     
