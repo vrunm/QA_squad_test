@@ -44,9 +44,9 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 
 - The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Accuracy of 82% and an F1 Score of 0.81.**
 
-#### **FINBERT**
+#### **Roberta**
 
-- The FINBERT model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Accuracy of 90.91% and an F1 Score of 0.91.**
+- The Roberta model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Accuracy of 90.91% and an F1 Score of 0.91.**
 
 **Hyperparameter Tuning**
 
