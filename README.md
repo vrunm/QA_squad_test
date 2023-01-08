@@ -67,7 +67,7 @@ respectively for batch size of 6.
 > Fine Tuning of the model has been referencing the paper: "[Question and Answering on SQuAD 2.0: BERT Is All
 You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf))".
 
-| Model | Epochs | EM | F1 Score(Weighted) |
+| Model | Epochs | Exact Match(EM) | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
 |BERT | 6 | 70% | 76|
 |DistilBERT | 6 | 86% |0.86|
