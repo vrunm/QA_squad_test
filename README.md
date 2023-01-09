@@ -68,22 +68,19 @@ You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/d
 
 | Model | Epochs | Exact Match(EM) | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
-|BERT | 6 | 70% | 76|
-|DistilBERT | 6 | 86% |0.86|
-|Roberta  | 6 | 76% |0.74|
+|BERT | 6 | 69 | 76|
+|DistilBERT | 6 | 70 |76|
+|Roberta  | 6 | 76 |74|
 
 **Evaluation Method**
-To evaluate our models we use the standard SQuAD performance metrics: Exact Match (EM) score
-and F1 score. For our project, we focus on the EM and F1 scores with respect to the dev set.
+To evaluate our models we use the standard SQuAD performance metrics: Exact Match (EM) score and F1 score. For our project, we focus on the EM and F1 scores with respect to the dev set.
 
-• **Exact Match**: A binary measure of whether the system output matches the ground truth
-answer exactly.
+• **Exact Match**: A binary measure of whether the system output matches the ground truth answer exactly.
 
-• **F1**: Harmonic mean of precision and recall, where precision = (true positives) / (true
-positives + false positives) and recall = true positives / (false negatives + true positives).
+• **F1**: Harmonic mean of precision and recall, where precision = (true positives) / (true positives + false positives) and recall = true positives / (false negatives + true positives).
 
     
-Considering the FinBERT model a detailed analysis of the optimizers used for training has been done.
+Considering the RoBERTA model a detailed analysis of the optimizers used for training has been done.
 The table lists out the different optimizers and thier parameters used in training.
 
 The following research paper has been used for fine tuning the optimizers: [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
