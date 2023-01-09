@@ -79,7 +79,7 @@ To evaluate our models we use the standard SQuAD performance metrics: Exact Matc
 • **F1**: Harmonic mean of precision and recall, where precision = (true positives) / (true positives + false positives) and recall = true positives / (false negatives + true positives).
 
     
-Considering the RoBERTA model a detailed analysis of the optimizers used for training has been done.
+Considering the **RoBERTa** model a detailed analysis of the optimizers used for training has been done.
 The table lists out the different optimizers and thier parameters used in training.
 
 The following research paper has been used for fine tuning the optimizers: [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
