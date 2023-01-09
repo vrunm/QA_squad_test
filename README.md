@@ -20,7 +20,7 @@ The Stanford Question Answering Dataset (SQuAD) is a reading comprehension datas
 The dataset contains the columns
 Id: a string feature.
 
-Title: The Title for each question adn answer pair.
+Title: The Title for each question and answer pair.
 
 Context: a string feature.
 
@@ -28,7 +28,6 @@ Question: a string feature.
 
 Answers: a dictionary feature containing:
 
-Leverage the two datasets in the following way:
 • train (129,941 examples): All taken from the official SQuAD 2.0 training set.
 • dev (6,078 examples): Half of the official dev set, randomly selected.
 • test (5,921 examples): The rest of the official dev set, plus hand-labeled examples.
