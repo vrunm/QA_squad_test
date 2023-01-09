@@ -36,11 +36,11 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 ## Experiments:
 #### **BERT:**
 
-- A baseline was created using the BERT model. Training the model with an **Adam optimizer with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an F1 Score of 76.**
+- A baseline was created using the BERT model. Training the model with an **Adam optimizer with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an F1 Score of 64.**
 
 #### **DistilBERT**
 
-- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Exact Match(EM)** of **70%** and an F1 Score of 76.**
+- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Exact Match(EM)** of **70%** and an F1 Score of 62.**
 
 #### **RoBERTa**
 
@@ -67,8 +67,8 @@ You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/d
 
 | Model | Epochs | Exact Match(EM) | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
-|BERT | 6 | 68 | 76|
-|DistilBERT | 6 | 70 |76|
+|BERT | 6 | 68 | 64|
+|DistilBERT | 6 | 70 |62|
 |RoBERTa  | 6 | 72 |74|
 
 **Evaluation Method**
