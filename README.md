@@ -36,7 +36,7 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 ## Experiments:
 #### **BERT:**
 
-- A baseline was created using the BERT model. Training the model with an **Adam optimizer with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an F1 Score of 64.**
+- A baseline was created using the BERT model. Training the model with an **Adam optimizer** with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an F1 Score of 64.**
 
 #### **DistilBERT**
 
