@@ -35,15 +35,15 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 ## Experiments:
 #### **BERT:**
 
-- A baseline was created using the BERT model. Training the model with an **Adam optimizer** with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an **F1 Score** of **64.**
+- A baseline was created using the BERT model. Training the model with an **Adam optimizer** with learning rate of **5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an **F1 Score** of **64.**
 
 #### **DistilBERT**
 
-- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Exact Match(EM)** of **70%** and an **F1 Score** of **62**.
+- The DistilBERT model was fine tuned on the data. Training the model with an **Adam optimizer** with learning rate of **5e-5**, yielded an **Exact Match(EM)** of **70%** and an **F1 Score** of **62**.
 
 #### **RoBERTa**
 
-- The RoBERTa model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Exact Match(EM)** of 72% and an **F1 Score** of **74**.
+- The RoBERTa model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of **5e-5**,  for **6 epochs** yielded an **Exact Match(EM)** of 72% and an **F1 Score** of **74**.
 
 **Hyperparameter Tuning**
 
@@ -51,10 +51,9 @@ Below are the hyperparameters that have been used for the BERT base uncased mode
 
 1. **Max Sequence length** - 512
 2. **Batch Size** - 32
-3. **Number of epochs** -6
+3. **Number of epochs** - 6
 
-> Fine Tuning of the model has been done with reference to this paper: "[Question and Answering on SQuAD 2.0: BERT Is All
-You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf))".
+> Fine Tuning of the model has been done with reference to this paper: [[1]](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf)).
 
 | Model | Epochs | Exact Match(EM) | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
@@ -73,7 +72,7 @@ To evaluate our models we use the standard SQuAD performance metrics: Exact Matc
 Considering the **RoBERTa** model a detailed analysis of the optimizers used for training has been done.
 The table lists out the different optimizers and thier parameters used in training.
 
-The following research paper has been used for fine tuning the optimizers: [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
+The following research paper has been used for fine tuning the optimizers: [[2]](https://arxiv.org/pdf/1910.05446.pdf)
 
 Optimizer | Learning Rate $\gamma$ |   Momentum $\eta$ | Alpha $\alpha$ | Beta1 $\beta_1$ | Beta2 $\beta_2$ | Epsilon $\epsilon$ |
 | ---     | ---                    | ---               | ---            | ---             | ---            | ---                |
@@ -98,3 +97,12 @@ The rate of convergence of the Adam optimizer is the fastest.
 
 We can conclude the **Empirical Order of convergence** of the optimizers:
 AdamW > RMSprop > NAG > SGD (Momentum) > SGD
+References:
+
+[1] [Question and Answering on SQuAD 2.0: BERT Is All You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf)
+
+[2] [On Empirical Comparisons of Optimizers for Deep Learning](https://arxiv.org/pdf/1910.05446.pdf)
+
+[3] [The Marginal Value of Adaptive Gradient Methods in Machine Learning](https://arxiv.org/pdf/1705.08292.pdf)
+
+[4] [Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients](https://arxiv.org/pdf/1705.07774.pdf)
