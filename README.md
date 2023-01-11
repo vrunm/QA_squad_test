@@ -104,5 +104,5 @@ SGD          | 0.01 |              |                   |                 |      
 
 The rate of convergence of the Adam optimizer is the fastest.
 
-We can conclude the **empirical order of convergence** of the optimizers:
+We can conclude the **Empirical Order of convergence** of the optimizers:
 AdamW > RMSprop > NAG > SGD (Momentum) > SGD
