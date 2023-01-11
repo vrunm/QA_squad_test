@@ -15,17 +15,16 @@ an attention hierarchy.
 ## Data:
 
 The Stanford Question Answering Dataset (**SQuAD**) is a reading comprehension dataset consisting of questions posed by crowdworkers on a set of Wikipedia articles. The answer to every question is a segment of text, or span, from the corresponding reading passage. There are 100,000+ question-answer pairs on 500+ articles.
+The dataset can be downloaded from:
+The dataset contains the columns:
 
-The dataset contains the columns
-Id: a string feature.
+**Title**: The Title for each question and answer pair.
 
-Title: The Title for each question and answer pair.
+**Context**: The context of the news article. 
 
-Context: a string feature.
+**Question**: The question regarding the context.
 
-Question: a string feature.
-
-Answers: a dictionary feature containing:
+**Answers**: The answer to each question.
 
 • train (129,941 examples): All taken from the official SQuAD 2.0 training set.
 • dev (6,078 examples): Half of the official dev set, randomly selected.
