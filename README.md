@@ -35,31 +35,23 @@ To fine-tune BERT for a Question-Answering system, it introduces a start vector 
 ## Experiments:
 #### **BERT:**
 
-- A baseline was created using the BERT model. Training the model with an **Adam optimizer** with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an F1 Score of 64.**
+- A baseline was created using the BERT model. Training the model with an **Adam optimizer** with learning rate of 5e-5** for **6 epochs** yielded an **Exact Match(EM)** of **68%** and an **F1 Score** of **64.**
 
 #### **DistilBERT**
 
-- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Exact Match(EM)** of **70%** and an F1 Score of 62.**
+- The DistilBERT model was fine tuned on the data. Training the model with an **AdamW optimizer with learning rate of 5e-5**, yielded an **Exact Match(EM)** of **70%** and an **F1 Score** of **62**.
 
 #### **RoBERTa**
 
-- The RoBERTa model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Exact Match(EM)** of 72% and an F1 Score of 74.
+- The RoBERTa model was fine tuned on the data.Training the model with an **Adam optimizer** with learning rate of 5e-5,  for **6 epochs** yielded an **Exact Match(EM)** of 72% and an **F1 Score** of **74**.
 
 **Hyperparameter Tuning**
 
 Below are the hyperparameters that have been used for the BERT base uncased model:
 
-1. **Max Sequence length** - After initial experiments with default sequence length (context + query token) 384, we switched to a sequence length of 512. This gave us a 0.6 F1
-improvement on our model.
-2. **Batch Size** - Default: 12, We had to use a batch size of 6 for all our experiments due to
-resource constraints and out of memory issues on the GPU for any larger batch size.
-3. **Number of epochs** - Default: 2 On increasing the number of epochs we saw a significant
-degradation in performance , we attribute this to the fact that the model starts
-to overfit to the training data with high variance and since the batch size is smaller the
-gradient updates could be noisy not allowing it to optimally converge.
-4. **Learning Rate** - Default: 3e-5 We wrote a script to help us find the optimal learning rate
-using grid search and found the optimal learning rates for SQuAD 2.0 and SQuAD 2.Q
-respectively for batch size of 6.
+1. **Max Sequence length** - 512
+2. **Batch Size** - 32
+3. **Number of epochs** -6
 
 > Fine Tuning of the model has been done with reference to this paper: "[Question and Answering on SQuAD 2.0: BERT Is All
 You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf))".
@@ -71,7 +63,7 @@ You Need](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/d
 |RoBERTa  | 6 | 72 |74|
 
 **Evaluation Method**
-To evaluate our models we use the standard SQuAD performance metrics: Exact Match (EM) score and F1 score. For our project, we focus on the EM and F1 scores with respect to the dev set.
+To evaluate our models we use the standard SQuAD performance metrics: Exact Match (EM) score and F1 score.
 
 • **Exact Match**: A binary measure of whether the system output matches the ground truth answer exactly.
 
