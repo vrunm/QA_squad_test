@@ -1,4 +1,3 @@
-#https://towardsdatascience.com/how-to-train-bert-for-q-a-in-any-language-63b62c780014
 from datasets import load_dataset
 import torch
 from tqdm.auto import tqdm  
