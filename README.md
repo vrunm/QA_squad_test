@@ -78,7 +78,7 @@ Optimizer | Learning Rate $\gamma$ |   Momentum $\eta$ | Alpha $\alpha$ | Beta1 
 | ---     | ---                    | ---               | ---            | ---             | ---            | ---                |
 AdamW     | 5e-5                   | 0.01              | 0.9            | 0.9             | 0.999          | 1e-5               |
 RMSprop   | 0.01                   | 0.01              | 0.99           | -               | -              | 1e-5                |
-NAG       | 5e-5 |                 | -                 | -              | -               |-               | 1e-5                  |   
+NAG       | 5e-5 |                 | 0.01              | -              | -               |-               | 1e-5                  |   
 SGD(Momentum)| 5e-5                | 0.001             | -              |  -              |-               | 1e-5                  |
 SGD          | 0.01 |              |                   |                 |                |                | 1e-5                   |
 
