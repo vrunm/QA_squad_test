@@ -51,9 +51,6 @@ def prep_data(dataset):
 dataset = prep_data(data['train'].shuffle(seed=123).select(range(1000)))
 
 
-dataset['answers'][:5]
-
-
 #The data format is now ready for tokenization.
 #Tokenization
 
