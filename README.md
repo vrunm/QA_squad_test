@@ -26,10 +26,6 @@ The dataset contains the columns:
 
 **Answers**: The answer to each question.
 
-• train (129,941 examples): All taken from the official SQuAD 2.0 training set.
-• dev (6,078 examples): Half of the official dev set, randomly selected.
-• test (5,921 examples): The rest of the official dev set, plus hand-labeled examples.
-
 To fine-tune BERT for a Question-Answering system, it introduces a start vector and an end vector. The probability of each word being the start-word is calculated by taking a dot product between the final embedding of the word and the start vector, followed by a softmax over all the words. The word with the highest probability value is considered.
 
 ## Experiments:
