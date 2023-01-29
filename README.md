@@ -49,8 +49,6 @@ Below are the hyperparameters that have been used for the BERT base uncased mode
 2. **Batch Size** - 32
 3. **Number of epochs** - 6
 
-> Fine Tuning of the model has been done with reference to this paper: [[1]](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/reports/default/15812785.pdf)).
-
 | Model | Epochs | Exact Match(EM) | F1 Score(Weighted) |
 | ----- | ------ | -------- | ------------------ |
 |BERT | 6 | 68 | 64|
