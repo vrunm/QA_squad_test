@@ -4,7 +4,7 @@
 The Squad creaters proposed this dataset as a means for networks to actually understand the text they were being interrogated about rather than simply being extractive papers.
 
 •The base BERT model has 12 transformer
-encoder layers that terminate in an interchangeable final layer which can be finetuned to the specific task. We chose this network as our baseline because of its use of contextual embeddings and global attention and because of the speed advantage derived from an RNN free architecture
+encoder layers that terminate in an interchangeable final layer which can be finetuned to the specific task. We chose this network as our baseline because of its use of contextual embeddings and global attention and because of the speed advantage derived from an RNN free architecture.
 
 •The base BERT network, the baseline for this project, is built with 12 Transformer encoder blocks.
 These encoder blocks contain multi-head attention and a feed forward network. Each head of the
